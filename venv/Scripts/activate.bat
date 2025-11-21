@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\File Perkuliahan\SEMESTER 7\File Matkul Semester 7\Manajemen Keamanan Informasi\File Tugas\UAS\Tugas_MKI\venv
+set VIRTUAL_ENV=C:\Users\asus\UAS-MKI-Perpustakaan\venv
 
 if not defined PROMPT set PROMPT=$P$G
 

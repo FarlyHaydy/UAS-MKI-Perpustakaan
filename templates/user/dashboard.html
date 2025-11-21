@@ -1,11 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard - Perpustakaan</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <h1>test</h1>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>PERPUSTAKAAN</h1>
+            </div>
+            <div class="nav-links">
+                <a href="{{ url_for('dashboard') }}" class="nav-link">Beranda</a>
+                <a href="{{ url_for('logout') }}" class="nav-link">Logout</a>
+            </div>
+        </nav>
+        
+        <div class="hero-content">
+            <p class="welcome-text">Selamat datang</p>
+            <h1 class="hero-title">{{ user.user_name }}</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- The Kinfolk Table Section -->
+        <section class="destination-section">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h2>The Kinfolk Table</h2>
+                    <p>
+                        The Kinfolk Table adalah buku resep dan lifestyle yang diterbitkan 
+                        pada 2013 oleh Nathan Williams, pendiri majalah Kinfolk. Buku setebal 
+                        368 halaman ini berisi 85 resep masakan dari orang-orang kreatif di 
+                        seluruh dunia, terutama dari Brooklyn, Copenhagen, Portland, dan 
+                        Inggris. Bukan sekadar buku resep biasa, buku ini lebih menekankan 
+                        filosofi berkumpul sederhana dengan teman dan keluarga makan 
+                        bersama tanpa berlebihan, dalam suasana hangat dan autentik. 
+                        Buku ini cocok untuk inspirasi lifestyle dan fotografi, bukan sebagai 
+                        panduan resep praktis sehari-hari.
+                    </p>
+                    <div class="arrow-button">
+                        <span>→</span>
+                    </div>
+                </div>
+                <div class="image-placeholder">
+                    <img src="{{ url_for('static', filename='images/buku3.jpg') }}" alt="The Kinfolk Table">
+                </div>
+            </div>
+        </section>
+
+        <!-- New World Translation Section -->
+        <section class="destination-section reverse">
+            <div class="content-wrapper">
+                <!-- Gambar di kiri -->
+                <div class="image-placeholder">
+                    <img src="{{ url_for('static', filename='images/buku2.jpg') }}" alt="Holy Scriptures">
+                </div>
+                <!-- Teks di kanan -->
+                <div class="text-content">
+                    <h2>New World Translation of the Holy Scriptures</h2>
+                    <p>
+                        New World Translation of the Holy Scriptures (NWT) adalah 
+                        terjemahan Alkitab yang diterbitkan oleh Watch Tower Bible and Tract 
+                        Society, organisasi induk Saksi-Saksi Yehuwa. Perjanjian Baru pertama 
+                        kali diterbitkan tahun 1950, kemudian Perjanjian Lama dalam lima 
+                        volume antara 1953-1960, dan akhirnya lengkap dalam satu volume 
+                        tahun 1961. Edisi revisi terbaru dirilis tahun 2013 dengan perbaikan 
+                        signifikan. NWT dikritik oleh teolog Kristen mainstream karena 
+                        dianggap mengubah teks Alkitab agar sesuai dengan doktrin Saksi-Saksi Yehuwa.
+                    </p>
+                    <div class="arrow-button">
+                        <span>→</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="{{ url_for('static', filename='css/js/script.js') }}"></script>
 </body>
 </html>
