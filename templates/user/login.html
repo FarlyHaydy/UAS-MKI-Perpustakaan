@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Perpustakaan</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <div class="container">
@@ -52,12 +53,15 @@
                         </span>
                     </div>
                     
+                    <!-- reCAPTCHA Widget -->
+                        <div class="g-recaptcha" data-sitekey="{{ site_key }}"></div>
+                    
                     <button type="submit" class="submit-btn">Login</button>
                 </form>
             </div>
         </div>
     </div>
     
-    <script src="{{ url_for('static', filename='css/js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
